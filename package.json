@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "commit": "cz",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -24,8 +25,14 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
     "eslint-config-prettier": "^8.9.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
