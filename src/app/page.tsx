@@ -5,8 +5,8 @@ import AuthBgImage from "@/components/authPage/authBgImage";
 
 const Login = () => {
   return (
-    <div className="min-h-[100vh] w-[100vw] flex flex-col bg-black">
-      <div className="flex-grow flex flex-col-reverse lg:flex-row text-[#E7E9EA]">
+    <div className="h-full w-full flex flex-col">
+      <div className="flex-grow flex flex-col-reverse lg:flex-row text-[#E7E9EA] bg-black ">
         <AuthBgImage />
         <AuthOptions />
       </div>

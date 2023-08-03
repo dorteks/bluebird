@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const FooterLinks = () => {
   return (
-    <div className="h-auto flex flex-wrap items-center justify-center px-[16px] py-[12px]">
+    <div className="h-auto flex flex-wrap items-center justify-center px-[16px] py-[12px] bg-black">
       {[
         { id: 1, text: "About", href: "" },
         { id: 2, text: "Help Center", href: "" },
