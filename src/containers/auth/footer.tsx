@@ -27,7 +27,7 @@ const FooterLinks = () => {
         return (
           <li
             key={i.id}
-            className=" list-none text-[13px] text-[#71767B] px-2 py-1 whitespace-nowrap "
+            className="list-none text-[13px] text-[#71767B] px-2 py-1 whitespace-nowrap"
           >
             <Link href={i.href}>{i.text}</Link>
           </li>

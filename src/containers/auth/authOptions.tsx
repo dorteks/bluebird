@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
-import { GoogleIcon, AppleIcon } from "../icons";
+import { AppleIcon } from "@/components/appleIcon";
+import { GoogleIcon } from "@/components/googleIcon";
 
 const SpanTexts = (props: { title: string; href: string }) => {
   return (
@@ -12,11 +12,12 @@ const SpanTexts = (props: { title: string; href: string }) => {
 
 const AuthOptions = () => {
   return (
-    <div className="w-full flex justify-center mx-auto p-4">
-      <div className="max-w-auto sm:max-w-[600px] lg:max-w-[650px] flex flex-col p-5  lg:mx-0">
-        <div className="w-12 h-11 mb-1">
-          <Image alt="logo" width={48} height={34} src="/assets/x-logo.webp" />
-        </div>
+    <div className="w-full flex items-center justify-center mx-auto p-4">
+      <div className="max-w-auto sm:max-w-[600px] lg:max-w-[650px] flex flex-col p-5 lg:mx-0">
+        {/* <div className="w-12 h-11">
+          <Xlogo />
+        </div> */}
+
         <h1 className="py-10 sm:py-12 text-[40px] leading-[46px] sm:text-[68px] sm:leading-[78px] font-bold">
           Happening now
         </h1>
