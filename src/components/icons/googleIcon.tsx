@@ -4,7 +4,7 @@ export const GoogleIcon = () => {
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
-      className="LgbsSe-Bz112c w-[18px] h-[18px] "
+      className="w-[18px] h-[18px] "
     >
       <g>
         <path

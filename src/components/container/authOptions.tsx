@@ -1,8 +1,9 @@
 import React from "react";
-import { AppleIcon } from "@/components/appleIcon";
-import { GoogleIcon } from "@/components/googleIcon";
+import Xlogo from "@/components/x-logo";
+import { AppleIcon } from "@/components/icons/appleIcon";
+import { GoogleIcon } from "@/components/icons/googleIcon";
 
-const SpanTexts = (props: { title: string; href: string }) => {
+export const SpanTexts = (props: { title: string; href: string }) => {
   return (
     <span className="text-[#1d9bf0] px-[3px] tap-transparent">
       <a href={props.href}>{props.title}</a>
@@ -12,12 +13,11 @@ const SpanTexts = (props: { title: string; href: string }) => {
 
 const AuthOptions = () => {
   return (
-    <div className="w-full flex items-center justify-center mx-auto p-4">
+    <main className="w-full flex items-center justify-center mx-auto p-4">
       <div className="max-w-auto sm:max-w-[600px] lg:max-w-[650px] flex flex-col p-5 lg:mx-0">
-        {/* <div className="w-12 h-11">
+        <div className="flex lg:hidden w-12">
           <Xlogo />
-        </div> */}
-
+        </div>
         <h1 className="py-10 sm:py-12 text-[40px] leading-[46px] sm:text-[68px] sm:leading-[78px] font-bold">
           Happening now
         </h1>
@@ -55,7 +55,7 @@ const AuthOptions = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
