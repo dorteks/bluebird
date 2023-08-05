@@ -11,7 +11,7 @@ export const SpanTexts = (props: { title: string; href: string }) => {
   );
 };
 
-const AuthOptions = () => {
+const AuthOptions = ({ toggleCreateAccount }: any) => {
   return (
     <main className="w-full flex items-center justify-center mx-auto p-4">
       <div className="max-w-auto sm:max-w-[600px] lg:max-w-[650px] flex flex-col p-5 lg:mx-0">
@@ -35,7 +35,10 @@ const AuthOptions = () => {
               <p className="py-2 pl-2">Signup with Apple</p>
             </button>{" "}
             <p className="self-center">or</p>
-            <button className="py-2 flex items-center justify-center bg-[#1d9bf0] rounded-full text-[15px] font-bold text-white tap-transparent">
+            <button
+              onClick={toggleCreateAccount}
+              className="py-2 flex items-center justify-center bg-[#1d9bf0] rounded-full text-[15px] font-bold text-white tap-transparent"
+            >
               Create account
             </button>
             <p className="text-[11px] text-[#71767b] font-normal  ">
