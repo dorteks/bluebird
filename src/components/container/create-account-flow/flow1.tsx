@@ -1,7 +1,16 @@
 import React from "react";
-import Input from "../input";
+import Input from "../../input";
 
-const Flow1 = ({ toggleCreateAccount, handleNextStep }: any) => {
+export interface FlowProps {
+  toggleCreateAccount?: () => void;
+  handleNextStep?: () => void;
+  handlePreviousStep?: () => void;
+}
+
+const Flow1: React.FC<FlowProps> = ({
+  toggleCreateAccount,
+  handleNextStep,
+}) => {
   return (
     <div className="absolute h-full w-full bg-[#5b708366] flex items-center justify-center">
       <div className="bg-black absolute w-full sm:max-w-[600px] h-full sm:max-h-[650px] rounded-none sm:rounded-xl">

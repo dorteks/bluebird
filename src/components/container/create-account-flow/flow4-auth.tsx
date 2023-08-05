@@ -1,7 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import { FlowProps } from "./flow1";
 
-const Flow4Auth = ({ toggleCreateAccount, handleNextStep }: any) => {
+const Flow4Auth: React.FC<FlowProps> = ({
+  toggleCreateAccount,
+  handleNextStep,
+}) => {
   return (
     <div className="absolute h-full w-full bg-[#5b708366] flex items-center justify-center">
       <div className="bg-black absolute w-full sm:max-w-[600px] h-full sm:max-h-[650px] rounded-none sm:rounded-xl">

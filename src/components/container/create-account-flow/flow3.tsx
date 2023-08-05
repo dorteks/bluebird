@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import Input from "../input";
-import { SpanTexts } from "./authOptions";
+import { FlowProps } from "./flow1";
+import Input from "@/components/input";
+import { SpanTexts } from "../authOptions";
 
-const Flow3 = ({ handleNextStep, handlePreviousStep }: any) => {
+const Flow3: React.FC<FlowProps> = ({ handleNextStep, handlePreviousStep }) => {
   return (
     <div className="absolute h-full w-full bg-[#5b708366] flex items-center justify-center">
       <div className="bg-black absolute w-full sm:max-w-[600px] h-full sm:max-h-[650px] rounded-none sm:rounded-xl">

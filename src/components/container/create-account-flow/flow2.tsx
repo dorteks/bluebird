@@ -1,7 +1,8 @@
 import React from "react";
-import { SpanTexts } from "./authOptions";
+import { FlowProps } from "./flow1";
+import { SpanTexts } from "../authOptions";
 
-const Flow2 = ({ handlePreviousStep, handleNextStep }: any) => {
+const Flow2: React.FC<FlowProps> = ({ handlePreviousStep, handleNextStep }) => {
   return (
     <div className="absolute h-full w-full bg-[#5b708366] flex items-center justify-center">
       <div className="bg-black absolute w-full sm:max-w-[600px] h-full sm:max-h-[650px] rounded-none sm:rounded-xl">
