@@ -33,8 +33,8 @@ const MenuLists = () => {
   };
 
   return (
-    <main className="w-full h-full flex flex-col items-end">
-      <div className="bg-black w-full max-w-[86px] xl:max-w-[275px] px-2 h-full flex flex-col items-start justify-between">
+    <main className="w-full h-full hidden sm:flex flex-col items-end">
+      <div className="bg-black w-[86px] xl:w-[275px] px-2 h-full flex flex-col items-start justify-between">
         <div className="w-full">
           <div className="w-[50px] h-[50px] p-[10px] mx-auto xl:ml-1">
             <Xlogo />
@@ -42,6 +42,7 @@ const MenuLists = () => {
           <>
             <Menu
               text="Home"
+              href="/home"
               icon={<HomeIcon />}
               filledIcon={<HomefilledIcon />}
               isActive={activeMenuItem === 0}
@@ -49,6 +50,7 @@ const MenuLists = () => {
             />
             <Menu
               text="Explore"
+              href="/explore"
               icon={<ExploreIcon />}
               isActive={activeMenuItem === 1}
               filledIcon={<ExplorefilledIcon />}
@@ -56,6 +58,7 @@ const MenuLists = () => {
             />
             <Menu
               text="Notifications"
+              href="/notifications"
               icon={<NotificationIcon />}
               isActive={activeMenuItem === 2}
               filledIcon={<NotificationfilledIcon />}
@@ -63,6 +66,7 @@ const MenuLists = () => {
             />
             <Menu
               text="Messages"
+              href="/messages"
               icon={<MessageIcon />}
               isActive={activeMenuItem === 3}
               filledIcon={<MessagefilledIcon />}
@@ -70,6 +74,7 @@ const MenuLists = () => {
             />
             <Menu
               text="Lists"
+              href="/lists"
               icon={<ListIcon />}
               filledIcon={<ListfilledIcon />}
               isActive={activeMenuItem === 4}
@@ -77,6 +82,7 @@ const MenuLists = () => {
             />{" "}
             <Menu
               text="Bookmarks"
+              href="/bookmarks"
               icon={<BookmarkIcon />}
               isActive={activeMenuItem === 5}
               filledIcon={<BookmarkfilledIcon />}
@@ -84,6 +90,7 @@ const MenuLists = () => {
             />
             <Menu
               text="Communities"
+              href="/communities"
               icon={<CommunitiesIcon />}
               isActive={activeMenuItem === 6}
               filledIcon={<CommunitiesfilledIcon />}
@@ -91,13 +98,15 @@ const MenuLists = () => {
             />
             <Menu
               text="Verified"
+              href="/verified"
               icon={<VerifiedIcon />}
               isActive={activeMenuItem === 7}
               filledIcon={<VerfiedfilledIcon />}
               onMenuClick={() => handleMenuItemClick(7)}
-            />{" "}
+            />
             <Menu
               text="Profile"
+              href="/profile"
               icon={<ProfileIcon />}
               isActive={activeMenuItem === 8}
               filledIcon={<ProfilefilledIcon />}
@@ -105,6 +114,7 @@ const MenuLists = () => {
             />
             <Menu
               text="More"
+              href="#"
               icon={<MoreIcon />}
               filledIcon={<MoreIcon />}
               isActive={activeMenuItem === 9}

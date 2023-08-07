@@ -1,24 +1,28 @@
 import React from "react";
+import Link from "next/link";
 
 interface MenuProps {
   text: string;
+  href: string;
   isActive: any;
+  icon: React.ReactNode;
   onMenuClick: () => void;
   filledIcon: React.ReactNode;
-  icon: React.ReactNode;
 }
 
 const Menu: React.FC<MenuProps> = ({
   text,
+  icon,
+  href,
   isActive,
   filledIcon,
   onMenuClick,
-  icon,
 }) => {
   return (
     <div>
       <div className="w-full py-1">
-        <div
+        <Link
+          href={href}
           onClick={onMenuClick}
           className={`w-full px-4 py-3 flex items-center justify-center xl:items-start xl:justify-start text-xl font-medium hover:bg-zinc-900 hover:rounded-full`}
         >
@@ -33,7 +37,7 @@ const Menu: React.FC<MenuProps> = ({
           >
             {text}
           </p>
-        </div>
+        </Link>
       </div>
     </div>
   );

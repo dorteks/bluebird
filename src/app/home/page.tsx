@@ -1,6 +1,12 @@
 import React from "react";
 import { Metadata } from "next";
-import MenuLists from "@/components/container/menu-container/menuLists";
+import PagesLayout from "@/components/layout/pages-layout";
+import Search from "@/components/container/trends-message/search";
+import Trends from "@/components/container/trends-message/trends";
+import Whotofollow from "@/components/container/trends-message/who-to-follow";
+import TrendsLayout from "@/components/container/trends-message/trends-layout";
+import ContentLayout from "@/components/container/content-container/content-layout";
+import TrendsFooter from "@/components/container/trends-message/trends-footer";
 
 export const metadata: Metadata = {
   title: "Home | Bluebird",
@@ -9,13 +15,17 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return (
-    <div className="w-full h-full flex text-[#b1b2b3]">
-      <section className="flex-1 bg-black">
-        <MenuLists />
-      </section>
-      <div className="w-[600px] bg-cyan-500">B</div>
-      <div className="flex-1 bg-green-500">C</div>
-    </div>
+    <PagesLayout>
+      <ContentLayout>
+        <p>Home Home Home</p>
+      </ContentLayout>
+      <TrendsLayout>
+        <Search />
+        <Trends />
+        <Whotofollow />
+        <TrendsFooter />
+      </TrendsLayout>
+    </PagesLayout>
   );
 };
 
