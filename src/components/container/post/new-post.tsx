@@ -16,7 +16,7 @@ const NewPost = () => {
           alt=""
           width={40}
           height={40}
-          className="w-[40px] h-[40px] bg-white "
+          className="w-[40px] h-[40px] bg-white rounded-full"
         />
       </div>
       <div className="w-full">

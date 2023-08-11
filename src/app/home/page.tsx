@@ -6,11 +6,12 @@ import Trends from "@/components/container/trends-message/trends";
 import Whotofollow from "@/components/container/trends-message/who-to-follow";
 import TrendsLayout from "@/components/container/trends-message/trends-layout";
 import ContentLayout from "@/components/container/content-container/content-layout";
-import TrendsFooter from "@/components/container/trends-message/trends-footer";
-import GetVerified from "@/components/container/trends-message/get-verified";
-import Messages from "@/components/container/messages/messages";
+
 import NewPost from "@/components/container/post/new-post";
+import Messages from "@/components/container/messages/messages";
 import PostTweets from "@/components/container/post/post-tweets";
+import GetVerified from "@/components/container/trends-message/get-verified";
+import TrendsFooter from "@/components/container/trends-message/trends-footer";
 
 export const metadata: Metadata = {
   title: "Home | Bluebird",
@@ -21,7 +22,7 @@ const Home = () => {
   return (
     <PagesLayout>
       <ContentLayout>
-        <div className="fixed top-0 opacity-90 bg-black z-10 w-full sm:max-w-[450px] lg:max-w-[599px] border-r-[1px] border-zinc-50 ">
+        <div className="fixed top-0 opacity-90 bg-black z-10 w-full sm:w-[529px] md:w-[599px] border-r-[2px] sm:border-r-[1px] border-zinc-50">
           <p className="my-4 px-4 text-[#e7e9ea] text-xl">Home</p>
           <div className="w-full flex border-b-[0.5px] border-zinc-50  ">
             <div className="px-4 text-[#e7e9ea] text-[15px] w-1/2 flex items-center justify-center">

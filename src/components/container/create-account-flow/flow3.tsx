@@ -3,7 +3,7 @@
 import React from "react";
 import { FlowProps } from "./flow1";
 import Input from "@/components/input";
-import { SpanTexts } from "../authOptions";
+import { SpanTexts } from "../auth/authOptions";
 
 const Flow3: React.FC<FlowProps> = ({ handleNextStep, handlePreviousStep }) => {
   return (
