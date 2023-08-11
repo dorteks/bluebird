@@ -7,7 +7,7 @@ type Props = {
 
 const ContentLayout = (props: Props) => {
   return (
-    <main className="w-screen sm:w-[530px] md:w-[600px] border-x-[1px] border-zinc-300">
+    <main className="w-screen h-screen overflow-y-auto no-scrollbar sm:w-[530px] md:w-[600px] border-x-[1px] border-zinc-300">
       <ContentContainer>{props.children}</ContentContainer>
     </main>
   );

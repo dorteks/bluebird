@@ -1,9 +1,8 @@
 import React from "react";
-import ExploreIcon from "../../icons/exploreIcon";
 
 const Search = () => {
   return (
-    <main className="w-full py-[6px] text-[#71767b] ">
+    <main className="w-full py-[6px] text-[#71767b]">
       <div className="w-full flex items-center bg-zinc-900 rounded-full">
         <div className="w-[49px] h-[18px] p-[13px] flex items-center">
           <svg viewBox="0 0 24 24" aria-hidden="true">

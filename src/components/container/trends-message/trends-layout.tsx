@@ -7,7 +7,7 @@ type Props = {
 
 const TrendsLayout = (props: Props) => {
   return (
-    <main>
+    <main className="relative h-full overflow-y-auto no-scrollbar ">
       <TrendsContainer>{props.children}</TrendsContainer>
     </main>
   );

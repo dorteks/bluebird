@@ -18,7 +18,7 @@ const PagesLayout = (props: Props) => {
         <section>
           <MenuLists />
         </section>
-        <section className="flex-grow flex gap-0 sm:gap-6 xl:gap-6">
+        <section className="flex-grow flex gap-0 sm:gap-6 md:gap-3 xl:gap-6">
           {props.children}
         </section>
       </div>
