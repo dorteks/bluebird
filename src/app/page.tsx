@@ -1,14 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import FooterLinks from "@/components/container/footer";
-import AuthXLogo from "@/components/container/authXLogo";
-import AuthOptions from "@/components/container/authOptions";
+
+import AuthOptions from "@/components/container/auth/authOptions";
 import Flow1 from "@/components/container/create-account-flow/flow1";
 import Flow2 from "@/components/container/create-account-flow/flow2";
 import Flow3 from "@/components/container/create-account-flow/flow3";
 import Flow4Auth from "@/components/container/create-account-flow/flow4-auth";
 import Flow5Auth from "@/components/container/create-account-flow/flow5-auth";
+import AuthXLogo from "@/components/container/auth/authXLogo";
+import FooterLinks from "@/components/container/auth/footer";
 
 const Login = () => {
   const [createAccount, setCreateAccout] = useState(false);

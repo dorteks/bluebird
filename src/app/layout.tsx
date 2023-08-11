@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home | Bluebird",
+  title: "Bluebird. It's what's happening / X",
   description: "Blubird created with NextJs",
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { FlowProps } from "./flow1";
-import { SpanTexts } from "../authOptions";
+import { SpanTexts } from "../auth/authOptions";
 
 const Flow2: React.FC<FlowProps> = ({ handlePreviousStep, handleNextStep }) => {
   return (
