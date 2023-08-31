@@ -1,5 +1,7 @@
-import React from "react";
-import { Metadata } from "next";
+"use client";
+
+import React, { useState } from "react";
+// import { Metadata } from "next";
 import PagesLayout from "@/components/layout/pages-layout";
 import Search from "@/components/container/trends-message/search";
 import Trends from "@/components/container/trends-message/trends";
@@ -13,25 +15,47 @@ import PostTweets from "@/components/container/post/post-tweets";
 import GetVerified from "@/components/container/trends-message/get-verified";
 import TrendsFooter from "@/components/container/trends-message/trends-footer";
 
-export const metadata: Metadata = {
-  title: "Home | Bluebird",
-  description: "Blubird created with NextJs",
-};
+// export const metadata: Metadata = {
+//   title: "Home | Bluebird",
+//   description: "Blubird created with NextJs",
+// };
 
 const Home = () => {
+  const [active, setActive] = useState(true);
+  const toggleActive = () => {
+    setActive(false);
+  };
+
   return (
     <PagesLayout>
       <ContentLayout>
         <div className="fixed top-0 opacity-90 bg-black z-10 w-full sm:w-[529px] md:w-[599px] border-r-[2px] sm:border-r-[1px] border-zinc-50">
-          <p className="my-4 px-4 text-[#e7e9ea] text-xl">Home</p>
-          <div className="w-full flex border-b-[0.5px] border-zinc-50  ">
-            <div className="px-4 text-[#e7e9ea] text-[15px] w-1/2 flex items-center justify-center">
-              <p className="py-3 px-1 text-center border-b-[4px] hover:border-b-[3px] border-black hover:border-blue-400">
+          <p className="my-4 px-4 text-[#e7e9ea] text-xl font-semibold cursor-pointer">
+            Home
+          </p>
+          <div className="w-full flex border-b-[0.5px] border-zinc-50   font-semibold">
+            <div
+              onClick={() => setActive(true)}
+              className="px-4 text-[#71767b] text-[15px] w-1/2 flex items-center justify-center hover:bg-zinc-800  "
+            >
+              <p
+                className={` ${
+                  active ? "border-blue-500 rounded-sm text-[#e7e9ea]" : ""
+                }  py-3 px-1  text-center border-b-[4px] border-black`}
+              >
                 For you
               </p>
             </div>
-            <div className="px-4 text-[#e7e9ea] text-[15px] w-1/2 flex items-center justify-center active:font-bold">
-              <p className="py-3 px-1 text-center border-b-[4px] hover:border-b-[3px] border-black hover:border-blue-400">
+
+            <div
+              onClick={toggleActive}
+              className="px-4 text-[#71767b] text-[15px] w-1/2 flex items-center justify-center hover:bg-zinc-800"
+            >
+              <p
+                className={` ${
+                  active ? "" : "border-blue-500 rounded-sm text-[#e7e9ea] "
+                }  py-3 px-1 text-center border-b-[4px] border-black`}
+              >
                 Following
               </p>
             </div>

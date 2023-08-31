@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import CommentIcon from "@/components/icons/comment-icon";
 import RetweetIcon from "@/components/icons/retweet-icon";
@@ -6,13 +8,18 @@ import LikeIcon from "@/components/icons/like-icon";
 import ViewIcon from "@/components/icons/view-icon";
 import ShareIcon from "@/components/icons/share-icon";
 
-const TweetOptions = (props: { icon: React.ReactNode; count?: string }) => {
+const TweetOptions = (props: { icon: React.ReactNode }) => {
+  const [count, setCount] = useState(0);
+
   return (
-    <div className="flex gap-2 items-center justify-center">
+    <div
+      onClick={() => setCount(count + 1)}
+      className="flex gap-2 items-center justify-center"
+    >
       <div className="w-[35px] h-[35px] flex items-center justify-center hover:bg-zinc-800 hover:rounded-full ">
         {props.icon}
       </div>
-      <p> {props.count} </p>
+      <p>{count}</p>
     </div>
   );
 };
@@ -66,10 +73,10 @@ const PostTweets = () => {
                 </div>
 
                 <div className="mt-3 pb-3 flex items-center justify-between">
-                  <TweetOptions icon={<CommentIcon />} count={i.commentCount} />
-                  <TweetOptions icon={<RetweetIcon />} count={i.retweetCount} />
-                  <TweetOptions icon={<LikeIcon />} count={i.likeCount} />
-                  <TweetOptions icon={<ViewIcon />} count={i.viewCount} />
+                  <TweetOptions icon={<CommentIcon />} />
+                  <TweetOptions icon={<RetweetIcon />} />
+                  <TweetOptions icon={<LikeIcon />} />
+                  <TweetOptions icon={<ViewIcon />} />
                   <TweetOptions icon={<ShareIcon />} />
                 </div>
               </div>
